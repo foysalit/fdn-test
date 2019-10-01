@@ -1,0 +1,30 @@
+$color-light: #aef0d2;
+$color-dark: #10302e;
+$color-theme: #2ad884;
+
+.App {
+  text-align: center;
+
+  .App__header {
+    $header-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: $color-dark;
+    width: 100%;
+    height: $header-height;
+    color: $color-light;
+
+    .App__header-logo {
+      margin-right: 16px;
+      height: 24px;
+    }
+  }
+
+
+  .App__content {
+    color: $color-theme;
+  }
+}

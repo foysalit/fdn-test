@@ -1,0 +1,29 @@
+{
+  "name": "fdn-test",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "The Foundation technical test",
+  "scripts": {
+    "develop-api": "yarn workspace fdn-test-api develop",
+    "develop-client": "yarn workspace fdn-test-client start",
+    "start": "npm-run-all -p develop-api develop-client",
+    "develop": "npm-run-all -p develop-api develop-client",
+    "lint": "eslint packages"
+  },
+  "author": "Foundation",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.1"
+  },
+  "dependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}

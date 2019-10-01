@@ -1,0 +1,15 @@
+{
+  "name": "fdn-test-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "watch-server": "PORT=3001 node watchServer",
+    "develop": "npm run watch-server"
+  },
+  "devDependencies": {
+    "chokidar": "^1.7.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
