@@ -3,17 +3,20 @@ const { spawn } = require('child_process');
 
 let runningApi = null;
 const restartApi = () => {
-  if (runningApi) {
-    runningApi.removeAllListeners();
-    runningApi.kill();
-  }
+    if (runningApi) {
+        runningApi.removeAllListeners();
+        runningApi.kill();
+    }
 
-  runningApi = spawn('node', ['--inspect=9222', './server/index.js'], { stdio: 'inherit' });
+    runningApi = spawn('node', ['--inspect=9222', './server/index.js'], {
+        stdio: 'inherit',
+    });
 
-  runningApi.on('close', code => console.error(`Looks like the API failed, with code ${code}.`));
+    runningApi.on('close', (code) => console.error(`Looks like the API failed, with code ${code}.`));
 };
 
 console.info('Starting API server');
-chokidar.watch('./server', { ignoreInitial: true })
-  .on('ready', restartApi)
-  .on('all', restartApi);
+chokidar
+    .watch('./server', { ignoreInitial: true })
+    .on('ready', restartApi)
+    .on('all', restartApi);

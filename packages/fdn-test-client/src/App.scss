@@ -3,8 +3,6 @@ $color-dark: #10302e;
 $color-theme: #2ad884;
 
 .App {
-  text-align: center;
-
   .App__header {
     $header-height: 36px;
 
@@ -21,10 +19,5 @@ $color-theme: #2ad884;
       margin-right: 16px;
       height: 24px;
     }
-  }
-
-
-  .App__content {
-    color: $color-theme;
   }
 }
