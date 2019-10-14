@@ -1,3 +1,8 @@
+### Quick Links
+[Main Commit](https://github.com/foysalit/fdn-test/commit/ae9d95849dd8309ca632759ff6dcf4eab59794a6)
+[OVERVIEW.md](./OVERVIEW.md) 
+[QUALITY.md](./QUALITY.md) 
+
 ### Foundation technical test
 
 This is a two part test - one practical and one theoretical.
